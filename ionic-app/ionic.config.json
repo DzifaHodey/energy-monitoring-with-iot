@@ -1,0 +1,7 @@
+{
+  "name": "bems",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

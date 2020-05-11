@@ -1,0 +1,23 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { IonicModule } from '@ionic/angular';
+
+import { Tab1PageRoutingModule } from './tab1-routing.module';
+
+import { Tab1Page } from './tab1.page';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    Tab1PageRoutingModule,
+    Ng2GoogleChartsModule
+   
+  ],
+  declarations: [Tab1Page]
+})
+export class Tab1PageModule {}

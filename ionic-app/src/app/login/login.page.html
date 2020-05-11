@@ -1,0 +1,35 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+<ion-content padding>
+    <div size-md="6" size-lg="5" size-xs="12" justify-content-center align-content-center padding>
+      
+      <ion-img src="assets/images/bems-logo.png"></ion-img>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <ion-item lines="full">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" name="email_address" [(ngModel)]="data.email_address" required></ion-input>
+        </ion-item>
+
+        <ion-item lines="full">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" name="pass_word" [(ngModel)]="data.pass_word" required></ion-input>
+        </ion-item>
+
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" color="danger" expand="block">Sign In</ion-button>
+            <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+  </ion-content>
+

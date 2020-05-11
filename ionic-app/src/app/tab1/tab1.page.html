@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Monitor Consumption</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>Energy Consumption per Month (W)</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <div style="height: 100; width: 100%;">
+      <google-chart [data]="pieChart"></google-chart></div>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Energy Consumption per Day (W)</ion-card-subtitle>
+      <ion-item>
+        <!-- <ion-label>Consumption For </ion-label> -->
+        <ion-datetime displayFormat="MMM DD, YYYY" placeholder="Select Day"></ion-datetime>
+      </ion-item> 
+    </ion-card-header>
+    <ion-card-content>
+             
+      <google-chart [data]="pieChart2"></google-chart>
+     
+      <ion-item>
+        <ion-label>Total Daily Consumption is {{dailyTotal}} W.</ion-label> 
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  
+
+</ion-content>
